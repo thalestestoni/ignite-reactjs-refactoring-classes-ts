@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import Header from '../../components/Header';
 import api from '../../services/api';
-import Food from '../../components/Food';
+import FoodContainer from '../../components/Food';
 import ModalAddFood from '../../components/ModalAddFood';
 import ModalEditFood from '../../components/ModalEditFood';
 import { FoodsContainer } from './styles';
@@ -105,7 +105,7 @@ class Dashboard extends Component {
         <FoodsContainer data-testid="foods-list">
           {foods &&
             foods.map(food => (
-              <Food
+              <FoodContainer
                 key={food.id}
                 food={food}
                 handleDelete={this.handleDeleteFood}
