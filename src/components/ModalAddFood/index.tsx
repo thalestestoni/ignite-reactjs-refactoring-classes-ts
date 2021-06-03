@@ -17,6 +17,7 @@ export default function ModalAddFood({isOpen, setIsOpen, handleAddFood}: ModalAd
 
   const handleSubmit: SubmitHandler<FormData> = data => {
     handleAddFood(data);
+    setIsOpen();
   }
 
   return (
