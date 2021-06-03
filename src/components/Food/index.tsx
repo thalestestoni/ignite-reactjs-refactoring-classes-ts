@@ -19,7 +19,7 @@ interface FoodProps {
   handleEditFood: (food: Food) => void;
 }
 
-export default function Food({ food, handleDelete, handleEditFood }: FoodProps) {
+export default function FoodContainer({ food, handleDelete, handleEditFood }: FoodProps) {
   const [isAvailable, setIsAvailable] = useState(food.available);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function Food({ food, handleDelete, handleEditFood }: FoodProps) 
     }
 
     updateFoodAvailable();
-  }, [isAvailable]);
+  }, [isAvailable, food]);
 
   return (
     <Container available={isAvailable}>
