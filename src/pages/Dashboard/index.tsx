@@ -7,10 +7,6 @@ import { FoodsContainer } from './styles';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-interface DashboardProps {
-
-}
-
 type Food = {
   id: number;
   name: string;
